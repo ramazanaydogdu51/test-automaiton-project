@@ -1,0 +1,8 @@
+<suite name="Regression Test Suite" parallel="false" thread-count="2">
+    <test name="Insider Test Suite">
+        <classes>
+            <class name="tests.Testt3"/>
+            <class name="tests.test4"/>
+        </classes>
+    </test>
+</suite>

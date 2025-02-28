@@ -1,0 +1,175 @@
+2025-02-28 12:37:14 INFO  Testt3:37 - Test başlamadan önce WebDriver başlatılıyor...
+2025-02-28 12:37:14 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:37:16 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:37:16 INFO  Testt3:43 - Test setup tamamlandı.
+2025-02-28 12:37:16 INFO  Testt3:52 - 🟢 TEST BAŞLADI: Ana sayfa ve kariyer sayfası akışı test ediliyor.
+2025-02-28 12:37:16 INFO  Testt3:53 - Ana Sayfa açılıyor: https://useinsider.com/
+2025-02-28 12:37:19 INFO  Testt3:55 - Sayfa başlığı alındı: #1 Leader in Individualized, Cross-Channel CX — Insider
+2025-02-28 12:37:19 INFO  Testt3:58 - ✅ Ana sayfa başlık doğrulandı.
+2025-02-28 12:37:19 INFO  Testt3:59 - 🖱️ Çerez kabul butonuna tıklanıyor.
+2025-02-28 12:37:19 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:37:20 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:37:20 INFO  Testt3:62 - 🔄 Kariyer sayfasına yönlendiriliyor...
+2025-02-28 12:37:22 INFO  Testt3:64 - 📌 Kariyer sayfası başlığı alındı: Ready to disrupt? | Insider Careers
+2025-02-28 12:37:22 INFO  Testt3:66 - ✅ Kariyer sayfası başlık doğrulandı.
+2025-02-28 12:37:22 INFO  Testt3:67 - 🔍 Kariyer sayfasındaki bloklar kontrol ediliyor...
+2025-02-28 12:37:22 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:37:23 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:37:23 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:37:23 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:37:23 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:37:23 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:37:23 INFO  Testt3:69 - ✅ Kariyer sayfasındaki tüm bloklar başarıyla görüntülendi.
+2025-02-28 12:37:23 INFO  Testt3:70 - 🟢 TEST TAMAMLANDI: Ana sayfa ve kariyer sayfası akışı başarıyla test edildi.
+2025-02-28 12:37:23 INFO  Testt3:84 - Test başarılı: testHomeAndCareersFlow
+2025-02-28 12:37:23 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:37:24 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:37:24 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:37:24 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:37:24 INFO  test4:49 - QA İşleri sayfası açılıyor...
+2025-02-28 12:37:27 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:37:27 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:37:28 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:37:29 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:37:34 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:37:34 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:37:34 INFO  CommonLib:125 - 🔽 Seçilecek dropdown değeri bulundu: Istanbul, Turkiye
+2025-02-28 12:37:34 INFO  CommonLib:127 - ✅ Dropdown değeri başarıyla seçildi: Istanbul, Turkiye
+2025-02-28 12:37:34 INFO  test4:58 - QA İşleri sayfasında açık pozisyonlar kontrol ediliyor...
+2025-02-28 12:37:35 INFO  test4:64 - View Role butonuna tıklanıyor ve yeni sayfaya geçiş yapılıyor...
+2025-02-28 12:37:35 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-02-28 12:37:35 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-02-28 12:37:35 INFO  CommonLib:167 - 🔄 Açık sekmeler: [6E028D43A0459F2D96823AE522C9F71C, 2B7DC40A43029EF6F98E3A77A6625A6E]
+2025-02-28 12:37:38 INFO  CommonLib:172 - ✅ Yeni sekmeye geçildi: Insider. - Senior Software Quality Assurance Engineer
+2025-02-28 12:37:38 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:37:38 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:38:14 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:38:14 INFO  Testt3:37 - Test başlamadan önce WebDriver başlatılıyor...
+2025-02-28 12:38:14 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:38:16 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:38:16 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:38:16 INFO  Testt3:43 - Test setup tamamlandı.
+2025-02-28 12:38:16 INFO  test4:49 - QA İşleri sayfası açılıyor...
+2025-02-28 12:38:16 INFO  Testt3:52 - 🟢 TEST BAŞLADI: Ana sayfa ve kariyer sayfası akışı test ediliyor.
+2025-02-28 12:38:16 INFO  Testt3:53 - Ana Sayfa açılıyor: https://useinsider.com/
+2025-02-28 12:38:19 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:38:19 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:38:19 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:38:20 INFO  Testt3:55 - Sayfa başlığı alındı: #1 Leader in Individualized, Cross-Channel CX — Insider
+2025-02-28 12:38:20 INFO  Testt3:58 - ✅ Ana sayfa başlık doğrulandı.
+2025-02-28 12:38:20 INFO  Testt3:59 - 🖱️ Çerez kabul butonuna tıklanıyor.
+2025-02-28 12:38:20 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:38:20 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:38:20 INFO  Testt3:62 - 🔄 Kariyer sayfasına yönlendiriliyor...
+2025-02-28 12:38:22 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:38:23 INFO  Testt3:64 - 📌 Kariyer sayfası başlığı alındı: Ready to disrupt? | Insider Careers
+2025-02-28 12:38:23 INFO  Testt3:66 - ✅ Kariyer sayfası başlık doğrulandı.
+2025-02-28 12:38:23 INFO  Testt3:67 - 🔍 Kariyer sayfasındaki bloklar kontrol ediliyor...
+2025-02-28 12:38:23 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:38:24 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:38:24 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:38:24 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:38:24 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:38:24 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:38:24 INFO  Testt3:69 - ✅ Kariyer sayfasındaki tüm bloklar başarıyla görüntülendi.
+2025-02-28 12:38:24 INFO  Testt3:70 - 🟢 TEST TAMAMLANDI: Ana sayfa ve kariyer sayfası akışı başarıyla test edildi.
+2025-02-28 12:38:24 INFO  Testt3:84 - Test başarılı: testHomeAndCareersFlow
+2025-02-28 12:38:24 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:38:25 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:38:26 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:38:26 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:38:26 INFO  CommonLib:125 - 🔽 Seçilecek dropdown değeri bulundu: Istanbul, Turkiye
+2025-02-28 12:38:26 INFO  CommonLib:127 - ✅ Dropdown değeri başarıyla seçildi: Istanbul, Turkiye
+2025-02-28 12:38:26 INFO  test4:58 - QA İşleri sayfasında açık pozisyonlar kontrol ediliyor...
+2025-02-28 12:38:36 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:38:37 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:38:51 INFO  Testt3:37 - Test başlamadan önce WebDriver başlatılıyor...
+2025-02-28 12:38:51 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:38:53 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:38:53 INFO  Testt3:43 - Test setup tamamlandı.
+2025-02-28 12:38:53 INFO  Testt3:52 - 🟢 TEST BAŞLADI: Ana sayfa ve kariyer sayfası akışı test ediliyor.
+2025-02-28 12:38:53 INFO  Testt3:53 - Ana Sayfa açılıyor: https://useinsider.com/
+2025-02-28 12:38:56 INFO  Testt3:55 - Sayfa başlığı alındı: #1 Leader in Individualized, Cross-Channel CX — Insider
+2025-02-28 12:38:57 INFO  Testt3:58 - ✅ Ana sayfa başlık doğrulandı.
+2025-02-28 12:38:57 INFO  Testt3:59 - 🖱️ Çerez kabul butonuna tıklanıyor.
+2025-02-28 12:38:57 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:38:57 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:38:57 INFO  Testt3:62 - 🔄 Kariyer sayfasına yönlendiriliyor...
+2025-02-28 12:39:00 INFO  Testt3:64 - 📌 Kariyer sayfası başlığı alındı: Ready to disrupt? | Insider Careers
+2025-02-28 12:39:00 INFO  Testt3:66 - ✅ Kariyer sayfası başlık doğrulandı.
+2025-02-28 12:39:00 INFO  Testt3:67 - 🔍 Kariyer sayfasındaki bloklar kontrol ediliyor...
+2025-02-28 12:39:00 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:39:00 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:39:00 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:39:00 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:39:00 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:39:00 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:39:00 INFO  Testt3:69 - ✅ Kariyer sayfasındaki tüm bloklar başarıyla görüntülendi.
+2025-02-28 12:39:00 INFO  Testt3:70 - 🟢 TEST TAMAMLANDI: Ana sayfa ve kariyer sayfası akışı başarıyla test edildi.
+2025-02-28 12:39:00 INFO  Testt3:84 - Test başarılı: testHomeAndCareersFlow
+2025-02-28 12:39:00 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:39:01 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:39:01 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:39:02 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:39:02 INFO  test4:49 - QA İşleri sayfası açılıyor...
+2025-02-28 12:39:04 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:39:05 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:39:05 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:39:07 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:39:11 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:39:12 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:39:12 INFO  CommonLib:125 - 🔽 Seçilecek dropdown değeri bulundu: Istanbul, Turkiye
+2025-02-28 12:39:12 INFO  CommonLib:127 - ✅ Dropdown değeri başarıyla seçildi: Istanbul, Turkiye
+2025-02-28 12:39:12 INFO  test4:58 - QA İşleri sayfasında açık pozisyonlar kontrol ediliyor...
+2025-02-28 12:39:13 INFO  test4:64 - View Role butonuna tıklanıyor ve yeni sayfaya geçiş yapılıyor...
+2025-02-28 12:39:13 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-02-28 12:39:13 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-02-28 12:39:13 INFO  CommonLib:167 - 🔄 Açık sekmeler: [AF719B7686F7EAD16687ADD4B8FEEC41, 859403C66A5EF7DBB504D8F96A4438EE]
+2025-02-28 12:39:16 INFO  CommonLib:172 - ✅ Yeni sekmeye geçildi: Insider. - Senior Software Quality Assurance Engineer
+2025-02-28 12:39:16 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:39:16 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:41:03 INFO  Testt3:37 - Test başlamadan önce WebDriver başlatılıyor...
+2025-02-28 12:41:03 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:41:05 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:41:05 INFO  Testt3:43 - Test setup tamamlandı.
+2025-02-28 12:41:05 INFO  Testt3:52 - 🟢 TEST BAŞLADI: Ana sayfa ve kariyer sayfası akışı test ediliyor.
+2025-02-28 12:41:05 INFO  Testt3:53 - Ana Sayfa açılıyor: https://useinsider.com/
+2025-02-28 12:41:08 INFO  Testt3:55 - Sayfa başlığı alındı: #1 Leader in Individualized, Cross-Channel CX — Insider
+2025-02-28 12:41:08 INFO  Testt3:58 - ✅ Ana sayfa başlık doğrulandı.
+2025-02-28 12:41:08 INFO  Testt3:59 - 🖱️ Çerez kabul butonuna tıklanıyor.
+2025-02-28 12:41:08 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:41:08 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:41:08 INFO  Testt3:62 - 🔄 Kariyer sayfasına yönlendiriliyor...
+2025-02-28 12:41:11 INFO  Testt3:64 - 📌 Kariyer sayfası başlığı alındı: Ready to disrupt? | Insider Careers
+2025-02-28 12:41:11 INFO  Testt3:66 - ✅ Kariyer sayfası başlık doğrulandı.
+2025-02-28 12:41:11 INFO  Testt3:67 - 🔍 Kariyer sayfasındaki bloklar kontrol ediliyor...
+2025-02-28 12:41:11 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:41:12 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-02-28 12:41:12 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:41:12 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-02-28 12:41:12 INFO  CommonLib:273 - 🔍 Kontrol ediliyor: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:41:12 INFO  CommonLib:282 - ✅ ELEMENT GÖRÜNTÜLENDİ: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-02-28 12:41:12 INFO  Testt3:69 - ✅ Kariyer sayfasındaki tüm bloklar başarıyla görüntülendi.
+2025-02-28 12:41:12 INFO  Testt3:70 - 🟢 TEST TAMAMLANDI: Ana sayfa ve kariyer sayfası akışı başarıyla test edildi.
+2025-02-28 12:41:12 INFO  Testt3:84 - Test başarılı: testHomeAndCareersFlow
+2025-02-28 12:41:12 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:41:13 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-02-28 12:41:13 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-02-28 12:41:13 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-02-28 12:41:13 INFO  test4:49 - QA İşleri sayfası açılıyor...
+2025-02-28 12:41:16 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:41:16 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-02-28 12:41:16 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:41:18 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[.='See all QA jobs']
+2025-02-28 12:41:22 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:41:22 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.cssSelector: #select2-filter-by-location-container
+2025-02-28 12:41:22 INFO  CommonLib:125 - 🔽 Seçilecek dropdown değeri bulundu: Istanbul, Turkiye
+2025-02-28 12:41:22 INFO  CommonLib:127 - ✅ Dropdown değeri başarıyla seçildi: Istanbul, Turkiye
+2025-02-28 12:41:22 INFO  test4:58 - QA İşleri sayfasında açık pozisyonlar kontrol ediliyor...
+2025-02-28 12:41:24 INFO  test4:64 - View Role butonuna tıklanıyor ve yeni sayfaya geçiş yapılıyor...
+2025-02-28 12:41:24 INFO  CommonLib:86 - Tıklanacak element bekleniyor: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-02-28 12:41:24 INFO  CommonLib:89 - Elemente başarıyla tıklandı: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-02-28 12:41:24 INFO  CommonLib:167 - 🔄 Açık sekmeler: [1DE35DBB05596C9BAD4AD6BDD2A1D6DA, 1CD5EA9727691AB2DCE5569DFAFA20ED]
+2025-02-28 12:41:27 INFO  CommonLib:172 - ✅ Yeni sekmeye geçildi: Insider. - Senior Software Quality Assurance Engineer
+2025-02-28 12:41:27 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-02-28 12:41:27 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.

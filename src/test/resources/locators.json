@@ -1,0 +1,27 @@
+{
+  "CareersPage": {
+    "locationsBlock": "//h3[contains(., 'Our Locations')]",
+    "teamsBlock": "//h3[contains(.,'Find your calling')]",
+    "lifeAtInsiderBlock": "//h2[.='Life at Insider']"
+  },
+  "HomePage": {
+    "companyMenu": "//a[contains(.,'Company')]",
+    "careersLink": "//a[contains(.,'Careers')]",
+    "acceptCookies": "//a[@id='wt-cli-accept-all-btn']"
+  },
+  "QAJobsPage": {
+    "jobListings": ".job-listing",
+    "viewRoleButton": ".btn.btn-navy.rounded.pt-2.pr-5.pb-2.pl-5",
+    "qaJobsLink": "//a[.='See all QA jobs']",
+    "filterByDepartment": "[title='Quality Assurance']",
+    "jobList": "#jobs-list",
+    "filterByLocation": "#select2-filter-by-location-container",
+    "filterByDepartmentDropdown": "#select2-filter-by-department-container",
+    "department": "[aria-labelledby='select2-filter-by-department-container'] > .select2-selection__rendered",
+    "viewRole": "//a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']",
+    "positionTitle": "//p[@class='position-title font-weight-bold']",
+    "positionDepartment": "//span[@class='position-department text-large font-weight-600 text-primary']",
+    "positionLocation": "//div[@class='position-location text-large']"
+  }
+}
+
