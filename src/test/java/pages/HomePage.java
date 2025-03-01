@@ -13,6 +13,7 @@ import java.io.ByteArrayInputStream;
 public class HomePage extends BasePage {
     private By companyMenu;
     private By careersLink;
+    private By homePage;
     public By acceptCookies;
 
     public HomePage(WebDriver driver) {
@@ -27,8 +28,10 @@ public class HomePage extends BasePage {
     }
 
     public boolean isHomePageDisplayed() {
-        return getPageTitle().contains("Insider");
+        return CommonLib.isElementDisplayed(driver,homePage,"HOME PAGE");
     }
+
+
 
     public void navigateToCareers() {
         driver.findElement(companyMenu).click();

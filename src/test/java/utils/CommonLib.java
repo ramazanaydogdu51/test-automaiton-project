@@ -80,7 +80,7 @@ public class CommonLib {
         }
     }
 
-    public static void clickElement(WebDriver driver, By element) {
+    public static void clickElement3(WebDriver driver, By element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             log.info("Tıklanacak element bekleniyor: " + element.toString());
@@ -92,6 +92,20 @@ public class CommonLib {
             throw e;
         } catch (NoSuchElementException e) {
             log.error("HATA: Element bulunamadı: " + element.toString(), e);
+        }
+    }
+
+    public static void clickElement(WebDriver driver, By element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            log.info("Tıklanacak element bekleniyor: {}", element);
+            WebElement webElement = wait.until(ExpectedConditions.elementToBeClickable(element));
+            webElement.click();
+            log.info("✅ Element başarıyla tıklandı: {}", element);
+        } catch (TimeoutException | NoSuchElementException e) {
+            log.error("❌ Element tıklanamadı: {} - Hata: {}", element, e.getMessage());
+            captureScreenshot(driver, "ClickElement_Error");
+            throw e;
         }
     }
 
@@ -133,9 +147,23 @@ public class CommonLib {
 
 
 
-    public static void waitForTextToAppear(WebDriver driver, By element, String expectedText) {
+    public static void waitForTextToAppear2(WebDriver driver, By element, String expectedText) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.textToBePresentInElementLocated(element, expectedText));
+    }
+
+
+    public static void waitForTextToAppear(WebDriver driver, By element, String expectedText) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            log.info("⏳ Bekleniyor: '{}' metni '{}' elementinde görünsün.", expectedText, element);
+            wait.until(ExpectedConditions.textToBePresentInElementLocated(element, expectedText));
+            log.info("✅ Metin bulundu: '{}' -> {}", expectedText, element);
+        } catch (TimeoutException e) {
+            log.error("❌ TimeoutException: Beklenen metin '{}' belirtilen elementte görünmedi: {}", expectedText, element);
+            captureScreenshot(driver, "WaitForText_Error");
+            throw new TimeoutException("HATA: '" + expectedText + "' metni, element " + element + " içinde yüklenmedi.", e);
+        }
     }
 
     public static void waitForSeconds(int seconds) {
@@ -160,7 +188,7 @@ public class CommonLib {
         log("❌ Yeni sekme bulunamadı!");
     }
 
-    public static void switchToNewTab(WebDriver driver) {
+    public static void switchToNewTab3(WebDriver driver) {
         String mainWindow = driver.getWindowHandle();
         Set<String> windowHandles = driver.getWindowHandles();
 
@@ -174,6 +202,21 @@ public class CommonLib {
             }
         }
 
+        log.error("❌ Yeni sekme bulunamadı!");
+        captureScreenshot(driver, "SwitchToNewTab_Error");
+    }
+
+    public static void switchToNewTab(WebDriver driver) {
+        String mainWindow = driver.getWindowHandle();
+        Set<String> windowHandles = driver.getWindowHandles();
+        log.info("🔄 Açık sekmeler: {}", windowHandles);
+        for (String window : windowHandles) {
+            if (!window.equals(mainWindow)) {
+                driver.switchTo().window(window);
+                log.info("✅ Yeni sekmeye geçildi: {}", driver.getTitle());
+                return;
+            }
+        }
         log.error("❌ Yeni sekme bulunamadı!");
         captureScreenshot(driver, "SwitchToNewTab_Error");
     }
@@ -275,7 +318,7 @@ public class CommonLib {
             WebElement element = driver.findElement(elementLocator);
 
             // Sayfanın ortasına kaydır
-            scrollToElementCenter(driver, elementLocator);
+            scrollToElementStart(driver, elementLocator);
 
             // SS al ve log yazdır
             captureScreenshot(driver, elementName + "_Displayed");
@@ -325,6 +368,24 @@ public class CommonLib {
     public static void scrollDown(WebDriver driver, int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0," + pixels + ");");
+    }
+
+    public static boolean isElementPresent(WebDriver driver, By element) {
+        try {
+            log.info("🔍 Element kontrol ediliyor: {}", element);
+            boolean isPresent = driver.findElements(element).size() > 0;
+            if (isPresent) {
+                log.info("✅ Element bulundu: {}", element);
+            } else {
+                log.warn("⚠️ Element bulunamadı: {}", element);
+                captureScreenshot(driver, "ElementNotFound_Error");
+            }
+            return isPresent;
+        } catch (Exception e) {
+            log.error("❌ Element kontrolü sırasında hata oluştu: {} - {}", element, e.getMessage());
+            captureScreenshot(driver, "ElementCheck_Error");
+            return false;
+        }
     }
 
 }

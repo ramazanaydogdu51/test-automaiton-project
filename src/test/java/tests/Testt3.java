@@ -53,7 +53,7 @@ public class Testt3 {
         log.info("Ana Sayfa açılıyor: https://useinsider.com/");
         homePage.openHomePage();
         log.info("Sayfa başlığı alındı: " + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("Insider"), "Ana sayfa başlığı beklenen değeri içermiyor!");
+        Assert.assertTrue(driver.getTitle().contains("Insider"), "Ana sayfa başlığı beklenen değeri içermiyor!"); //home page ile yap
         CommonLib.captureScreenshot(driver, "Ana Sayfa Ekran Görüntüsü");
         log.info("✅ Ana sayfa başlık doğrulandı.");
         log.info("🖱️ Çerez kabul butonuna tıklanıyor.");

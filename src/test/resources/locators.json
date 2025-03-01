@@ -5,6 +5,7 @@
     "lifeAtInsiderBlock": "//h2[.='Life at Insider']"
   },
   "HomePage": {
+    "homePage": "//router[contains(@class, 'home-page')]",
     "companyMenu": "//a[contains(.,'Company')]",
     "careersLink": "//a[contains(.,'Careers')]",
     "acceptCookies": "//a[@id='wt-cli-accept-all-btn']"
