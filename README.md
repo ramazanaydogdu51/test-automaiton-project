@@ -1,18 +1,18 @@
 #  Test Automation Project
 
-Welcome to the **Test Automation Project**, a comprehensive and scalable framework designed for web automation testing. This project utilizes **Selenium WebDriver**, **TestNG**, **Allure Reporting**, and other robust technologies to ensure seamless automated testing for web applications.
+This project is a **fully automated testing framework** built with **Selenium WebDriver, TestNG, and Allure Reporting**.  
+It is designed to **automate web application testing** and provide **detailed test reports** with logging and screenshots.
 
 ---
 
 ## 📌 Features
 
-- ✅ **Selenium WebDriver** for browser automation
-- ✅ **TestNG** for structured test execution
-- ✅ **Log4j2** for detailed logging
-- ✅ **Allure Reports** for professional test reporting
-- ✅ **Parallel Execution** for faster test runs
-- ✅ **JSON Configuration** for dynamic test data management
-- ✅ **WebDriver Manager** for handling driver binaries
+- 🚀 **Selenium WebDriver** - Cross-browser web automation
+- ✅ **TestNG** - Structured test execution with annotations
+- 📊 **Allure Reports** - Detailed test results visualization
+- 📝 **Log4j2** - Advanced logging for debugging
+- 🌍 **JSON-based test configuration** - Dynamic data management
+- 🔥 **Parallel execution support** - Faster test runs
 
 
 ---
@@ -77,8 +77,12 @@ Run all tests:
 ```bash
 mvn test
 ```
+### 4️⃣ Generate and View Test Reports
+Generate and view test reports with **Allure**:
 
-
+```bash
+mvn allure:serve
+```
 ---
 
 ## 📜 Configuration Files
@@ -91,39 +95,60 @@ mvn test
 
 ## 📊 Test Reports
 
-Generate and view test reports with **Allure**:
+To generate and view test reports, follow these steps:
 
+1️⃣ **Run the tests first:**
+```bash
+mvn test
+```
+
+2️⃣ **Generate Allure reports:**
 ```bash
 mvn allure:serve
 ```
+3️⃣ Open the report in the browser.
 
-Test logs are saved in:
+
+
+📌 Test logs are saved in:
+
+
 
 ```
 logs/test-log.log
+```
+
+```
+📂 target/allure-results/   # Allure raw test results
+📂 target/site/allure/      # HTML report
 ```
 
 ---
 
 ## 📌 Technologies Used
 
-- **Java**
-- **Maven**
-- **Selenium WebDriver**
-- **TestNG**
-- **Allure Reports**
-- **Log4j2**
-- **JSON Configuration**
-- **WebDriver Manager**
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)  
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)  
+![TestNG](https://img.shields.io/badge/TestNG-FF6F00?style=for-the-badge&logo=testng&logoColor=white)  
+![Allure](https://img.shields.io/badge/Allure-0A0A0A?style=for-the-badge&logo=allure&logoColor=white)
+
+![Log4j](https://img.shields.io/badge/Log4j-2C2C2C?style=for-the-badge&logo=apache&logoColor=white)
+
+![WebDriver Manager](https://img.shields.io/badge/WebDriver_Manager-0078D7?style=for-the-badge&logo=selenium&logoColor=white)
 
 
 ## 📹 Test Automation Videos
 
-### Video 1: Test Case Execution
-### Video 2: Allure Report Demonstration
-### Video 3: Resources and Logs
+### 🎬 Test Case Execution
+[![Test Execution](https://img.youtube.com/vi/kXEGQ_RTeIA/0.jpg)](https://youtu.be/kXEGQ_RTeIA)
 
-[🎬 İzlemek için tıklayın](https://ramazanaydogdu51.github.io/test-automaiton-project/)
+### 🎬 Allure Report Demonstration
+[![Allure Report](https://img.youtube.com/vi/99mPiVD2a_o/0.jpg)](https://youtu.be/99mPiVD2a_o)
+
+### 🎬 Resources and Logs
+[![Resources and Logs](https://img.youtube.com/vi/Fhk5PlEZEBI/0.jpg)](https://youtu.be/Fhk5PlEZEBI)
+
 
 
 

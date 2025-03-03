@@ -194,3 +194,72 @@ Session ID: 7763638b94ed435cfa019f4361988fd0
 2025-03-03 23:35:20 ERROR CommonLib:77 - ❌ Element tıklanamadı: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc'] - Hata: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc'] (tried for 10 second(s) with 500 milliseconds interval)
 2025-03-03 23:35:20 INFO  DriverManager:33 - WebDriver kapatılıyor...
 2025-03-03 23:35:20 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-03-04 00:52:37 INFO  Ramazan_Aydogdu_Test:28 - Test başlamadan önce WebDriver başlatılıyor...
+2025-03-04 00:52:37 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-03-04 00:52:41 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-03-04 00:52:41 INFO  HomePage:32 - Ana Sayfa açılıyor...
+2025-03-04 00:52:45 INFO  HomePage:41 - Checking HomePage Display
+2025-03-04 00:52:45 INFO  HomePage:42 - Expected URL: https://useinsider.com/
+2025-03-04 00:52:45 INFO  HomePage:43 - Actual URL: https://useinsider.com/
+2025-03-04 00:52:46 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.xpath: //a[contains(.,'Company')]
+2025-03-04 00:52:46 INFO  QAJobsPage:39 - QA Jobs Page açılıyor...
+2025-03-04 00:52:47 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-03-04 00:52:47 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-03-04 00:52:47 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
+2025-03-04 01:41:22 INFO  Ramazan_Aydogdu_Test:28 - Test başlamadan önce WebDriver başlatılıyor...
+2025-03-04 01:41:22 INFO  DriverManager:16 - Yeni WebDriver başlatılıyor...
+2025-03-04 01:41:25 INFO  DriverManager:25 - WebDriver başarıyla başlatıldı.
+2025-03-04 01:41:25 INFO  HomePage:32 - Ana Sayfa açılıyor...
+2025-03-04 01:41:28 INFO  HomePage:41 - Checking HomePage Display
+2025-03-04 01:41:28 INFO  HomePage:42 - Expected URL: https://useinsider.com/
+2025-03-04 01:41:28 INFO  HomePage:43 - Actual URL: https://useinsider.com/
+2025-03-04 01:41:29 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-03-04 01:41:29 INFO  CommonLib:69 - ✅ Element başarıyla tıklandı: By.xpath: //a[@id='wt-cli-accept-all-btn']
+2025-03-04 01:41:29 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.xpath: //a[contains(.,'Company')]
+2025-03-04 01:41:29 INFO  CommonLib:69 - ✅ Element başarıyla tıklandı: By.xpath: //a[contains(.,'Company')]
+2025-03-04 01:41:29 INFO  CommonLib:73 - 📸 Element tıklama sonrası ekran görüntüsü alınıyor...
+2025-03-04 01:41:29 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.xpath: //a[contains(.,'Careers')]
+2025-03-04 01:41:33 INFO  CommonLib:69 - ✅ Element başarıyla tıklandı: By.xpath: //a[contains(.,'Careers')]
+2025-03-04 01:41:33 INFO  CareersPage:43 - Checking CareerPage Display
+2025-03-04 01:41:33 INFO  CareersPage:44 - Expected URL: https://useinsider.com/careers/
+2025-03-04 01:41:33 INFO  CareersPage:45 - Actual URL: https://useinsider.com/careers/
+2025-03-04 01:41:33 INFO  CommonLib:180 - 🔍 Kontrol ediliyor: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-03-04 01:41:33 INFO  CommonLib:189 - ✅ ELEMENT GÖRÜNTÜLENDİ: Locations Block (Locator: By.xpath: //h3[contains(., 'Our Locations')])
+2025-03-04 01:41:33 INFO  CommonLib:180 - 🔍 Kontrol ediliyor: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-03-04 01:41:33 INFO  CommonLib:189 - ✅ ELEMENT GÖRÜNTÜLENDİ: Teams Block (Locator: By.xpath: //h3[contains(.,'Find your calling')])
+2025-03-04 01:41:33 INFO  CommonLib:180 - 🔍 Kontrol ediliyor: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-03-04 01:41:34 INFO  CommonLib:189 - ✅ ELEMENT GÖRÜNTÜLENDİ: Life At Insider Block (Locator: By.xpath: //h2[.='Life at Insider'])
+2025-03-04 01:41:34 INFO  QAJobsPage:39 - QA Jobs Page açılıyor...
+2025-03-04 01:41:36 INFO  QAJobsPage:46 - Checking QA Jobs Page Display
+2025-03-04 01:41:36 INFO  QAJobsPage:47 - Expected URL: https://useinsider.com/careers/quality-assurance/
+2025-03-04 01:41:36 INFO  QAJobsPage:48 - Actual URL: https://useinsider.com/careers/quality-assurance/
+2025-03-04 01:41:36 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.cssSelector: .btn-outline-secondary
+2025-03-04 01:41:37 INFO  CommonLib:69 - ✅ Element başarıyla tıklandı: By.cssSelector: .btn-outline-secondary
+2025-03-04 01:41:37 INFO  CommonLib:104 - ⏳ Bekleniyor: 'Quality Assurance' metni 'By.cssSelector: [title='Quality Assurance']' elementinde görünsün.
+2025-03-04 01:41:41 INFO  CommonLib:106 - ✅ Metin bulundu: 'Quality Assurance' -> By.cssSelector: [title='Quality Assurance']
+2025-03-04 01:41:41 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.cssSelector: #select2-filter-by-location-container
+2025-03-04 01:41:41 INFO  CommonLib:69 - ✅ Element başarıyla tıklandı: By.cssSelector: #select2-filter-by-location-container
+2025-03-04 01:41:41 INFO  CommonLib:73 - 📸 Element tıklama sonrası ekran görüntüsü alınıyor...
+2025-03-04 01:41:41 INFO  CommonLib:92 - 🔽 Seçilecek dropdown değeri bulundu: Istanbul, Turkiye
+2025-03-04 01:41:41 INFO  CommonLib:94 - ✅ Dropdown değeri başarıyla seçildi: Istanbul, Turkiye
+2025-03-04 01:41:41 INFO  CommonLib:209 - 🔍 Kontrol ediliyor: No Job Result (Locator: By.cssSelector: .no-job-result)
+2025-03-04 01:41:41 INFO  CommonLib:214 - ✅ ELEMENT YOK: No Job Result sayfada bulunamadı.
+2025-03-04 01:41:41 INFO  CommonLib:104 - ⏳ Bekleniyor: 'View Role' metni 'By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']' elementinde görünsün.
+2025-03-04 01:41:43 INFO  CommonLib:106 - ✅ Metin bulundu: 'View Role' -> By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-03-04 01:41:43 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Senior Software Quality Assurance Engineer' (Beklenen: 'Software')
+2025-03-04 01:41:43 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Software QA Tester / Intercontinental Support - Insider Testinium Tech Hub (Remote)' (Beklenen: 'Software')
+2025-03-04 01:41:43 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Software Quality Assurance Engineer' (Beklenen: 'Software')
+2025-03-04 01:41:44 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Quality Assurance' (Beklenen: 'Quality Assurance')
+2025-03-04 01:41:44 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Quality Assurance' (Beklenen: 'Quality Assurance')
+2025-03-04 01:41:44 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Quality Assurance' (Beklenen: 'Quality Assurance')
+2025-03-04 01:41:44 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Istanbul, Turkiye' (Beklenen: 'Istanbul')
+2025-03-04 01:41:44 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Istanbul, Turkiye' (Beklenen: 'Istanbul')
+2025-03-04 01:41:44 INFO  CommonLib:162 - 🔍 Kontrol edilen element metni: 'Istanbul, Turkiye' (Beklenen: 'Istanbul')
+2025-03-04 01:41:44 INFO  CommonLib:65 - ⏳ Tıklanacak element bekleniyor: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-03-04 01:41:44 INFO  CommonLib:69 - ✅ Element başarıyla tıklandı: By.xpath: //a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']
+2025-03-04 01:41:44 INFO  CommonLib:134 - 🔄 Açık sekmeler: [A7F6D5EC5A925655F4346C2B9F00D25C, 4B1248E0EEEC4B44ADF9E2EB12710612]
+2025-03-04 01:41:50 INFO  CommonLib:139 - ✅ Yeni sekmeye geçildi: Insider. - Senior Software Quality Assurance Engineer
+2025-03-04 01:41:50 INFO  CommonLib:180 - 🔍 Kontrol ediliyor: Application For This Job Button (Locator: By.xpath: //div[@class='postings-btn-wrapper']/a[.='Apply for this job'])
+2025-03-04 01:41:50 INFO  CommonLib:189 - ✅ ELEMENT GÖRÜNTÜLENDİ: Application For This Job Button (Locator: By.xpath: //div[@class='postings-btn-wrapper']/a[.='Apply for this job'])
+2025-03-04 01:41:51 INFO  DriverManager:33 - WebDriver kapatılıyor...
+2025-03-04 01:41:51 INFO  DriverManager:36 - WebDriver başarıyla kapatıldı.
