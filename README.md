@@ -13,7 +13,7 @@ Welcome to the **Test Automation Project**, a comprehensive and scalable framewo
 - ✅ **Parallel Execution** for faster test runs
 - ✅ **JSON Configuration** for dynamic test data management
 - ✅ **WebDriver Manager** for handling driver binaries
-- ✅ **Ashot** for advanced screenshot capturing
+
 
 ---
 
@@ -61,11 +61,6 @@ Run all tests:
 mvn test
 ```
 
-Run a specific test class:
-
-```bash
-mvn test -Dtest=tests.Ramazan_Aydogdu_Test
-```
 
 ---
 
