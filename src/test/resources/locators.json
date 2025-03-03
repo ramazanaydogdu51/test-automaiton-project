@@ -1,11 +1,14 @@
 {
+  "CommonLoc": {
+    "noJobResult": ".no-job-result"
+  },
   "CareersPage": {
     "locationsBlock": "//h3[contains(., 'Our Locations')]",
     "teamsBlock": "//h3[contains(.,'Find your calling')]",
     "lifeAtInsiderBlock": "//h2[.='Life at Insider']"
   },
   "HomePage": {
-    "homePage": "//router[contains(@class, 'home-page')]",
+    "homePage": "//router",
     "companyMenu": "//a[contains(.,'Company')]",
     "careersLink": "//a[contains(.,'Careers')]",
     "acceptCookies": "//a[@id='wt-cli-accept-all-btn']"
@@ -13,7 +16,7 @@
   "QAJobsPage": {
     "jobListings": ".job-listing",
     "viewRoleButton": ".btn.btn-navy.rounded.pt-2.pr-5.pb-2.pl-5",
-    "qaJobsLink": "//a[.='See all QA jobs']",
+    "seeAllJobs": ".btn-outline-secondary",
     "filterByDepartment": "[title='Quality Assurance']",
     "jobList": "#jobs-list",
     "filterByLocation": "#select2-filter-by-location-container",
@@ -23,6 +26,7 @@
     "positionTitle": "//p[@class='position-title font-weight-bold']",
     "positionDepartment": "//span[@class='position-department text-large font-weight-600 text-primary']",
     "positionLocation": "//div[@class='position-location text-large']"
+
   }
 }
 

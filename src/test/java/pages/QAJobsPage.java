@@ -1,35 +1,50 @@
 package pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import utils.CommonLib;
 import utils.JsonReader;
 
 public class QAJobsPage extends BasePage {
+    private static final Logger log =  LogManager.getLogger(QAJobsPage.class);
 
-    public By qaJobsLink;
+    public By seeAllJobs;
     public By filterByDepartment;
     public By jobList;
     public By department;
     public By viewRole;
+    public By noJobResult;
+    private String qaJobsPageUrl;
 
     public QAJobsPage(WebDriver driver) {
         super(driver);
-        this.qaJobsLink = By.xpath(JsonReader.getLocator("QAJobsPage", "qaJobsLink"));
+        this.seeAllJobs = By.cssSelector(JsonReader.getLocator("QAJobsPage", "seeAllJobs"));
         this.filterByDepartment = By.cssSelector(JsonReader.getLocator("QAJobsPage", "filterByDepartment"));
         this.jobList = By.cssSelector(JsonReader.getLocator("QAJobsPage", "jobList"));
         this.department = By.cssSelector(JsonReader.getLocator("QAJobsPage", "department"));
         this.viewRole = By.xpath(JsonReader.getLocator("QAJobsPage", "viewRole"));
-
+        this.noJobResult = By.cssSelector(JsonReader.getLocator("CommonLoc", "noJobResult"));
+        this.qaJobsPageUrl = JsonReader.getUrl("qaJobsPageUrl");
     }
     public void openQAJobsPage() {
+        log.info("QA Jobs Page açılıyor...");
         driver.get("https://useinsider.com/careers/quality-assurance/");
     }
-//    public void selectLocation(String locationName) {
-//        By dropdown = By.xpath("//span[@id='select2-filter-by-location-container']"); // Dropdown locator'ı
-//        CommonLib.selectDropdownValue(driver, dropdown, locationName);
-//    }
+    public boolean isQAjobsPageDisplayed() {
+        String expectedUrl = qaJobsPageUrl; // Burada doğru sayfa URL'sini belirtiyoruz
+        String actualUrl = driver.getCurrentUrl();
+        log.info("Checking QA Jobs Page Display");
+        log.info("Expected URL: {}", expectedUrl);
+        log.info("Actual URL: {}", actualUrl);
+        Assert.assertEquals(actualUrl,expectedUrl,"QA Jobs Page Degeri Beklenilen gibi değil");
+        CommonLib.captureScreenshot(driver, "QA Jobs Page Ekran Görüntüsü");
+        return true;
+    }
+
     public void selectLocation(String locationName) {
         CommonLib.selectDropdownValue(driver, "QAJobsPage", "filterByLocation", locationName);
     }
@@ -47,6 +62,14 @@ public class QAJobsPage extends BasePage {
         CommonLib.clickRandomElement(driver, "QAJobsPage", "viewRoleButton");
     }
 
+    public void filterQAJobsAndVerifyJobList(){
+        CommonLib.clickElement(driver, seeAllJobs,false,"");
+        CommonLib.waitForTextToAppear(driver, filterByDepartment, "Quality Assurance");
+        CommonLib.scrollToElementCenter(driver, filterByDepartment);
+        selectLocation("Istanbul, Turkiye");
+        Assert.assertTrue(CommonLib.isElementNotDisplayed(driver,noJobResult,"No Job Result"),"No positions available");
+
+    }
 
 
 }

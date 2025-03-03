@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import ru.yandex.qatools.ashot.AShot;
@@ -61,7 +62,7 @@ public class CommonLib {
 
     // Belirtilen elementi görünene kadar bekleyen metot
     public static void waitForElementToBeVisible(WebDriver driver, By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2)); // 2 saniye bekler
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // 2 saniye bekler
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
@@ -95,19 +96,40 @@ public class CommonLib {
         }
     }
 
-    public static void clickElement(WebDriver driver, By element) {
+//    public static void clickElement2(WebDriver driver, By element) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        try {
+//            log.info("Tıklanacak element bekleniyor: {}", element);
+//            WebElement webElement = wait.until(ExpectedConditions.elementToBeClickable(element));
+//            webElement.click();
+//            log.info("✅ Element başarıyla tıklandı: {}", element);
+//        } catch (TimeoutException | NoSuchElementException e) {
+//            log.error("❌ Element tıklanamadı: {} - Hata: {}", element, e.getMessage());
+//            captureScreenshot(driver, "ClickElement_Error");
+//            throw e;
+//        }
+//    }
+    public static void clickElement(WebDriver driver, By element, boolean takeScreenshot ,String descriptionOfPic) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            log.info("Tıklanacak element bekleniyor: {}", element);
+            log.info("⏳ Tıklanacak element bekleniyor: {}", element);
+
             WebElement webElement = wait.until(ExpectedConditions.elementToBeClickable(element));
-            webElement.click();
+            webElement.click(); // ✅ Elemente normal click
             log.info("✅ Element başarıyla tıklandı: {}", element);
+
+            // 📸 Eğer test kanıtı isteniyorsa, SS al
+            if (takeScreenshot) {
+                log.info("📸 Element tıklama sonrası ekran görüntüsü alınıyor...");
+                CommonLib.captureScreenshot(driver, "Click_Success_" + descriptionOfPic);
+            }
         } catch (TimeoutException | NoSuchElementException e) {
             log.error("❌ Element tıklanamadı: {} - Hata: {}", element, e.getMessage());
-            captureScreenshot(driver, "ClickElement_Error");
+            CommonLib.captureScreenshot(driver, "ClickElement_Error");
             throw e;
         }
     }
+
 
 
     public static void selectDropdownValue2(WebDriver driver, String pageName, String dropdownKey, String valueToSelect) {
@@ -115,7 +137,7 @@ public class CommonLib {
         By dropdown = By.cssSelector(JsonReader.getLocator(pageName, dropdownKey));
 
         // Dropdown'u aç
-        clickElement(driver, dropdown);
+        clickElement(driver, dropdown,true,"");
 
         // Seçeneklerin yüklendiğinden emin ol
         By option = By.xpath("//li[contains(text(),'" + valueToSelect + "')]");
@@ -124,13 +146,13 @@ public class CommonLib {
         log(String.valueOf(option));
 
         // Şehri veya departmanı seç
-        clickElement(driver, option);
+        clickElement(driver, option,true,"");
 
     }
     public static void selectDropdownValue(WebDriver driver, String pageName, String dropdownKey, String valueToSelect) {
         try {
             By dropdown = By.cssSelector(JsonReader.getLocator(pageName, dropdownKey));
-            clickElement(driver, dropdown);
+            clickElement(driver, dropdown,true,"");
 
             By option = By.xpath("//li[contains(text(),'" + valueToSelect + "')]");
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -339,6 +361,54 @@ public class CommonLib {
             return false;
         }
     }
+    public static boolean isElementNotDisplayed(WebDriver driver, By elementLocator, String elementName) {
+        try {
+            log.info("🔍 Kontrol ediliyor: " + elementName + " (Locator: " + elementLocator.toString() + ")");
+
+            List<WebElement> elements = driver.findElements(elementLocator);
+
+            if (elements.isEmpty()) {
+                log.info("✅ ELEMENT YOK: " + elementName + " sayfada bulunamadı.");
+                return true;
+            } else {
+                log.warn("⚠️ ELEMENT BULUNDU: " + elementName + " beklenmedik şekilde göründü!");
+                captureScreenshot(driver, elementName + "_Unexpectedly_Found");
+                return false;
+            }
+        } catch (Exception e) {
+            log.error("⚠️ BEKLENMEYEN HATA: " + elementName + " kontrol edilirken hata oluştu!", e);
+            captureScreenshot(driver, elementName + "_UnexpectedError");
+            return false;
+        }
+    }
+
+
+    public static boolean isElementClassEquals(WebDriver driver, String pageName, String locatorKey, String expectedClass) {
+        try {
+            By elementLocator = By.xpath(JsonReader.getLocator(pageName, locatorKey)); // JSON'dan XPath al
+            WebElement element = driver.findElement(elementLocator);
+            String classAttribute = element.getAttribute("class").trim(); // Fazladan boşlukları temizle
+
+            log.info("🔍 Elementin class değeri kontrol ediliyor: '{}'", classAttribute);
+
+            if (classAttribute.equals(expectedClass)) {
+                log.info("✅ Elementin class değeri tam olarak '{}' eşleşiyor.", expectedClass);
+                captureScreenshot(driver, pageName);
+                return true;
+            } else {
+                log.warn("⚠️ Elementin class değeri beklenen '{}' ile eşleşmiyor! Gerçek değer: '{}'", expectedClass, classAttribute);
+                captureScreenshot(driver, "ClassCheck_Failed");
+                return false;
+            }
+        } catch (NoSuchElementException e) {
+            log.error("❌ Element bulunamadı: {} - {}", locatorKey, e.getMessage());
+            captureScreenshot(driver, "ElementNotFound");
+            return false;
+        }
+    }
+
+
+
 
 
     public static void addFullPageScreenshotToAllure(WebDriver driver, String screenshotName) {
@@ -387,5 +457,22 @@ public class CommonLib {
             return false;
         }
     }
+
+    public static void assertElementNotPresent(WebDriver driver, By element, String errorMessage) {
+        log.info("🔍 Element kontrol ediliyor: " + element.toString());
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // 5 saniye bekle
+            wait.until(ExpectedConditions.presenceOfElementLocated(element));
+
+            log.error("❌ HATA! İstenmeyen element bulundu: " + element.toString());
+            captureScreenshot(driver, "Element_Found_" + element.toString());
+            Assert.fail(errorMessage);
+        } catch (TimeoutException e) {
+            log.info("✅ Kontrol başarılı: " + element.toString() + " elementi sayfada bulunamadı.");
+        }
+    }
+
+
 
 }
