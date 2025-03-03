@@ -25,7 +25,8 @@
     "viewRole": "//a[@href='https://jobs.lever.co/useinsider/78ddbec0-16bf-4eab-b5a6-04facb993ddc']",
     "positionTitle": "//p[@class='position-title font-weight-bold']",
     "positionDepartment": "//span[@class='position-department text-large font-weight-600 text-primary']",
-    "positionLocation": "//div[@class='position-location text-large']"
+    "positionLocation": "//div[@class='position-location text-large']",
+    "applicationForThisJobButton": "//div[@class='postings-btn-wrapper']/a[.='Apply for this job']"
 
   }
 }

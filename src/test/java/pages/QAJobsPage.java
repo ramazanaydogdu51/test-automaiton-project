@@ -10,7 +10,7 @@ import utils.CommonLib;
 import utils.JsonReader;
 
 public class QAJobsPage extends BasePage {
-    private static final Logger log =  LogManager.getLogger(QAJobsPage.class);
+    private static final Logger log = LogManager.getLogger(QAJobsPage.class);
 
     public By seeAllJobs;
     public By filterByDepartment;
@@ -18,6 +18,7 @@ public class QAJobsPage extends BasePage {
     public By department;
     public By viewRole;
     public By noJobResult;
+    public By applicationForThisJobButton;
     private String qaJobsPageUrl;
 
     public QAJobsPage(WebDriver driver) {
@@ -28,19 +29,24 @@ public class QAJobsPage extends BasePage {
         this.department = By.cssSelector(JsonReader.getLocator("QAJobsPage", "department"));
         this.viewRole = By.xpath(JsonReader.getLocator("QAJobsPage", "viewRole"));
         this.noJobResult = By.cssSelector(JsonReader.getLocator("CommonLoc", "noJobResult"));
+        this.applicationForThisJobButton = By.xpath(JsonReader.getLocator("QAJobsPage", "applicationForThisJobButton"));
+
+
         this.qaJobsPageUrl = JsonReader.getUrl("qaJobsPageUrl");
     }
+
     public void openQAJobsPage() {
         log.info("QA Jobs Page açılıyor...");
         driver.get("https://useinsider.com/careers/quality-assurance/");
     }
+
     public boolean isQAjobsPageDisplayed() {
         String expectedUrl = qaJobsPageUrl; // Burada doğru sayfa URL'sini belirtiyoruz
         String actualUrl = driver.getCurrentUrl();
         log.info("Checking QA Jobs Page Display");
         log.info("Expected URL: {}", expectedUrl);
         log.info("Actual URL: {}", actualUrl);
-        Assert.assertEquals(actualUrl,expectedUrl,"QA Jobs Page Degeri Beklenilen gibi değil");
+        Assert.assertEquals(actualUrl, expectedUrl, "QA Jobs Page Degeri Beklenilen gibi değil");
         CommonLib.captureScreenshot(driver, "QA Jobs Page Ekran Görüntüsü");
         return true;
     }
@@ -48,27 +54,35 @@ public class QAJobsPage extends BasePage {
     public void selectLocation(String locationName) {
         CommonLib.selectDropdownValue(driver, "QAJobsPage", "filterByLocation", locationName);
     }
+
     public void selectDepartment(String departmentName) {
         CommonLib.selectDropdownValue(driver, "QAJobsPage", "filterByDepartmentDropdown", departmentName);
     }
+
     public void checkJobListings(SoftAssert softAssert) {
+        CommonLib.scrollDown(driver, 500);
+        CommonLib.waitForTextToAppear(driver, viewRole, "View Role");
         CommonLib.verifyTextInElements(driver, By.xpath(JsonReader.getLocator("QAJobsPage", "positionTitle")), "Software", softAssert);
         CommonLib.verifyTextInElements(driver, By.xpath(JsonReader.getLocator("QAJobsPage", "positionDepartment")), "Quality Assurance", softAssert);
         CommonLib.verifyTextInElements(driver, By.xpath(JsonReader.getLocator("QAJobsPage", "positionLocation")), "Istanbul", softAssert);
+        CommonLib.captureScreenshot(driver, "QA JOBS SS");
         softAssert.assertAll();
     }
 
-    public void clickRandomViewRoleButton() {
-        CommonLib.clickRandomElement(driver, "QAJobsPage", "viewRoleButton");
-    }
 
-    public void filterQAJobsAndVerifyJobList(){
-        CommonLib.clickElement(driver, seeAllJobs,false,"");
+    public void filterQAJobsAndVerifyJobList() {
+        CommonLib.clickElement(driver, seeAllJobs, false, "");
         CommonLib.waitForTextToAppear(driver, filterByDepartment, "Quality Assurance");
         CommonLib.scrollToElementCenter(driver, filterByDepartment);
         selectLocation("Istanbul, Turkiye");
-        Assert.assertTrue(CommonLib.isElementNotDisplayed(driver,noJobResult,"No Job Result"),"No positions available");
+        Assert.assertTrue(CommonLib.isElementNotDisplayed(driver, noJobResult, "No Job Result"), "No positions available");
 
+    }
+
+    public void verifyViewRoleRedirection() {
+        CommonLib.clickElement(driver, viewRole, false, "After Click View Role");
+        CommonLib.switchToNewTab(driver,true);
+        Assert.assertTrue(CommonLib.isElementDisplayed(driver, applicationForThisJobButton, "Application For This Job Button"), "Application Butonu Bulunamadi");
     }
 
 

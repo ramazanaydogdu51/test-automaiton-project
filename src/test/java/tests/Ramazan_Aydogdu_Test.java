@@ -16,7 +16,7 @@ import utils.DriverManager;
 @Listeners({AllureTestNg.class})
 public class Ramazan_Aydogdu_Test {
     private static WebDriver driver;
-    private static HomePage homePage;
+    public static HomePage homePage;
     private static CareersPage careersPage;
     private static QAJobsPage qaJobsPage;
     private static SoftAssert softAssert;
@@ -40,7 +40,7 @@ public class Ramazan_Aydogdu_Test {
     public void testHomePage() {
         homePage.openHomePage();
         homePage.isHomePageDisplayed();
-        CommonLib.clickElement(driver, homePage.acceptCookies,false,""); // duzeltilecek
+        CommonLib.acceptCookies(driver);
     }
 
     @Test(priority = 2)
@@ -61,10 +61,7 @@ public class Ramazan_Aydogdu_Test {
         qaJobsPage.openQAJobsPage();
         qaJobsPage. isQAjobsPageDisplayed();
         qaJobsPage.filterQAJobsAndVerifyJobList();
-//        CommonLib.clickElement(driver, qaJobsPage.seeAllJobs,false,"");
-//        CommonLib.waitForTextToAppear(driver, qaJobsPage.filterByDepartment, "Quality Assurance");
-//        CommonLib.scrollToElementCenter(driver, qaJobsPage.filterByDepartment);
-//        qaJobsPage.selectLocation("Istanbul, Turkiye");
+
     }
 
     @Test(priority = 4)
@@ -72,11 +69,8 @@ public class Ramazan_Aydogdu_Test {
     @Description("QA İşleri Sayfasında Açık Pozisyonları Kontrol Et")
     @Severity(SeverityLevel.NORMAL)
     public void testJobListings() {
-        CommonLib.scrollDown(driver, 500);
-        CommonLib.waitForTextToAppear(driver, qaJobsPage.viewRole, "View Role");
-        qaJobsPage.checkJobListings(softAssert);
 
-        CommonLib.captureScreenshot(driver, "QA JOBS SS");
+        qaJobsPage.checkJobListings(softAssert);
     }
 
     @Test(priority = 5)
@@ -84,15 +78,12 @@ public class Ramazan_Aydogdu_Test {
     @Description("View Role Butonunu Tıkla ve Yönlendirmeyi Kontrol Et")
     @Severity(SeverityLevel.CRITICAL)
     public void testViewRoleButton() {
-        CommonLib.clickElement(driver, qaJobsPage.viewRole,true,"After Click View Role");
-        CommonLib.switchToNewTab(driver);
-        CommonLib.captureScreenshot(driver, "Final Page");
+        qaJobsPage.verifyViewRoleRedirection();
     }
 
     @AfterClass
     @Step("Tüm testler bittiğinde tarayıcıyı kapat")
     public void tearDownClass() {
         DriverManager.quitDriver();
-        softAssert.assertAll();
     }
 }

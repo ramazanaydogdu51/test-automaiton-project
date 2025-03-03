@@ -29,33 +29,13 @@ public class CareersPage extends BasePage {
     }
 
 
-    public boolean isLocationsBlockDisplayed() {
-        CommonLib.scrollToElementCenter(driver, locationsBlock);
-        CommonLib.captureScreenshot(driver, "Locations Block");
-        return driver.findElement(locationsBlock).isDisplayed();
-    }
-
-    public boolean isTeamsBlockDisplayed() {
-        CommonLib.scrollToElementCenter(driver, teamsBlock);
-        CommonLib.captureScreenshot(driver, "Teams Block");
-        return driver.findElement(teamsBlock).isDisplayed();
-    }
-
-    public boolean isLifeAtInsiderBlockDisplayed() {
-        CommonLib.scrollToElementCenter(driver, lifeAtInsiderBlock);
-        CommonLib.captureScreenshot(driver, "Life at Insider Block");
-        return driver.findElement(lifeAtInsiderBlock).isDisplayed();
-    }
-
     public void testCareerPageSections() {
         CommonLib.isElementDisplayed(driver, locationsBlock, "Locations Block");
         CommonLib.isElementDisplayed(driver, teamsBlock, "Teams Block");
         CommonLib.isElementDisplayed(driver, lifeAtInsiderBlock, "Life At Insider Block");
     }
 
-    public boolean isCareerPageRouterCorrect() {
-        return CommonLib.isElementClassEquals(driver, "CareersPage", "careerPageRouter", "career-page");
-    }
+
 
     public boolean isCareerPageDisplayed() {
         String expectedUrl = careersPageUrl; // Burada doğru sayfa URL'sini belirtiyoruz

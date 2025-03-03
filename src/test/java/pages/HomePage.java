@@ -1,17 +1,13 @@
 package pages;
 
-import io.qameta.allure.Allure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import utils.CommonLib;
 import utils.JsonReader;
 
-import java.io.ByteArrayInputStream;
 
 public class HomePage extends BasePage {
     private By companyMenu;
@@ -50,18 +46,10 @@ public class HomePage extends BasePage {
         return true;
     }
 
-    public boolean isHomePageRouterCorrect() {
-        return CommonLib.isElementClassEquals(driver, "HomePage", "homePage", "home-page");
-    }
-
-
-
-
 
 
     public void navigateToCareers() {
         CommonLib.clickElement(driver,companyMenu,true,"Company Menu Görüntüsü");
-//        CommonLib.captureScreenshot(driver,"Company Menu");
         CommonLib.clickElement(driver,careersLink,false,"Careers");
 
 
