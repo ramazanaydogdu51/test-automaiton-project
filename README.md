@@ -1,22 +1,25 @@
- Test Automation Project
+# 🚀 Test Automation Project
 
-Welcome to the Test Automation Project, a comprehensive and scalable framework designed for web automation testing. 
-This project utilizes Selenium WebDriver, TestNG, Allure Reporting, and other robust technologies to ensure seamless automated testing for web applications.
+Welcome to the **Test Automation Project**, a comprehensive and scalable framework designed for web automation testing. This project utilizes **Selenium WebDriver**, **TestNG**, **Allure Reporting**, and other robust technologies to ensure seamless automated testing for web applications.
 
-📌 Features
+---
 
-✅ Selenium WebDriver for browser automation
-✅ TestNG for structured test execution
-✅ Log4j2 for detailed logging
-✅ Allure Reports for professional test reporting
-✅ Parallel Execution for faster test runs
-✅ JSON Configuration for dynamic test data management
-✅ WebDriver Manager for handling driver binaries
+## 📌 Features
 
-📂 Project Structure
+- ✅ **Selenium WebDriver** for browser automation
+- ✅ **TestNG** for structured test execution
+- ✅ **Log4j2** for detailed logging
+- ✅ **Allure Reports** for professional test reporting
+- ✅ **Parallel Execution** for faster test runs
+- ✅ **JSON Configuration** for dynamic test data management
+- ✅ **WebDriver Manager** for handling driver binaries
+- ✅ **Ashot** for advanced screenshot capturing
 
-📂 .allure
-📂 logs
+---
+
+## 📂 Project Structure
+
+```
 📂 src
  ┣ 📂 main
  ┃ ┗ 📂 java
@@ -31,58 +34,91 @@ This project utilizes Selenium WebDriver, TestNG, Allure Reporting, and other ro
 📜 config.json           # Configuration settings
 📜 locators.json         # XPath and CSS selectors
 📜 log4j2.xml            # Logging configuration
+```
 
-⚙️ Setup Instructions
+---
 
-1️⃣ Clone the Repository
+## ⚙️ Setup Instructions
 
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/ramazanaydogdu51/test-automaiton-project.git
 cd test-automaiton-project
+```
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 
+```bash
 mvn clean install
+```
 
-3️⃣ Run Tests
+### 3️⃣ Run Tests
 
 Run all tests:
 
+```bash
 mvn test
+```
 
-📜 Configuration Files
+Run a specific test class:
 
-config.json → Contains URLs for the test application.
+```bash
+mvn test -Dtest=tests.Ramazan_Aydogdu_Test
+```
 
-locators.json → Stores XPath and CSS selectors for page elements.
+---
 
-log4j2.xml → Manages logging levels and output locations.
+## 📜 Configuration Files
 
-📊 Test Reports
+- **config.json** → Contains URLs for the test application.
+- **locators.json** → Stores XPath and CSS selectors for page elements.
+- **log4j2.xml** → Manages logging levels and output locations.
 
-Generate and view test reports with Allure:
+---
 
+## 📊 Test Reports
+
+Generate and view test reports with **Allure**:
+
+```bash
 mvn allure:serve
+```
 
 Test logs are saved in:
 
+```
 logs/test-log.log
+```
 
+---
 
-📌 Technologies Used
+## 📌 Technologies Used
 
-Java
+- **Java**
+- **Maven**
+- **Selenium WebDriver**
+- **TestNG**
+- **Allure Reports**
+- **Log4j2**
+- **JSON Configuration**
+- **WebDriver Manager**
+- **Ashot (Screenshot Capturing)**
 
-Maven
+---
 
-Selenium WebDriver
+## 🤝 Contributing
 
-TestNG
+To contribute:
 
-Allure Reports
+1. 🍴 **Fork the repository**
+2. 🛠️ **Create a feature branch**
+3. 💻 **Develop and commit changes**
+4. 📩 **Submit a pull request**
 
-Log4j2
+---
 
-JSON Configuration
+## 📩 Contact
 
-WebDriver Manager
+For any questions or suggestions, feel free to reach out!
 
