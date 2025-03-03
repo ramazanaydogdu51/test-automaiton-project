@@ -102,23 +102,8 @@ logs/test-log.log
 
 ## 📹 Test Automation Videos
 
-### Video 1: Test Case Execution
-<video width="600" controls>
-  <source src="https://raw.githubusercontent.com/KULLANICI_ADI/REPO_ADI/main/videos/test-execution.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[🎬 İzlemek için tıklayın](https://ramazanaydogdu51.github.io/test-automaiton-project/)
 
-### Video 2: Allure Report Demonstration
-<video width="600" controls>
-  <source src="https://raw.githubusercontent.com/KULLANICI_ADI/REPO_ADI/main/videos/allure-report.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-### Video 3: Others
-<video width="600" controls>
-  <source src="https://raw.githubusercontent.com/KULLANICI_ADI/REPO_ADI/main/videos/others.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 
 For any questions or suggestions, feel free to reach out!
