@@ -98,22 +98,9 @@ logs/test-log.log
 - **Log4j2**
 - **JSON Configuration**
 - **WebDriver Manager**
-- **Ashot (Screenshot Capturing)**
 
----
 
-## 🤝 Contributing
 
-To contribute:
-
-1. 🍴 **Fork the repository**
-2. 🛠️ **Create a feature branch**
-3. 💻 **Develop and commit changes**
-4. 📩 **Submit a pull request**
-
----
-
-## 📩 Contact
 
 For any questions or suggestions, feel free to reach out!
 
