@@ -100,31 +100,18 @@ logs/test-log.log
 - **WebDriver Manager**
 
 
-## 📹 Test Automation Demo
-
 ## 📹 Test Automation Demos
 
 ### Video 1: Test Case Execution
-<video width="600" controls>
-  <source src="videos/test-execution.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+🎬 [Watch Video](videos/test-execution.mp4)
 
 ### Video 2: Allure Report Demonstration
-<video width="600" controls>
-  <source src="videos/allure-report.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+🎬 [Watch Video](videos/allure-report.mp4)
 
 ### Video 3: Others
-<video width="600" controls>
-  <source src="videos/others.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-
-
-
+🎬 [Watch Video](videos/others.mp4)
 
 For any questions or suggestions, feel free to reach out!
+
+
 
