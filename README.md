@@ -102,6 +102,10 @@ logs/test-log.log
 
 ## 📹 Test Automation Videos
 
+### Video 1: Test Case Execution
+### Video 2: Allure Report Demonstration
+### Video 3: Resources and Logs
+
 [🎬 İzlemek için tıklayın](https://ramazanaydogdu51.github.io/test-automaiton-project/)
 
 
