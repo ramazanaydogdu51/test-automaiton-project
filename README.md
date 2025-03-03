@@ -100,6 +100,14 @@ logs/test-log.log
 - **WebDriver Manager**
 
 
+## 📹 Test Automation Demo
+
+<video width="600" controls>
+  <source src="videos/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
 
 For any questions or suggestions, feel free to reach out!
