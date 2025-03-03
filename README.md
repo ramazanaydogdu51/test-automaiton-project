@@ -142,14 +142,17 @@ logs/test-log.log
 
 ### 🎬 Test Case Execution
 https://youtu.be/kXEGQ_RTeIA
+
 [![Test Execution](https://img.youtube.com/vi/kXEGQ_RTeIA/0.jpg)](https://youtu.be/kXEGQ_RTeIA)
 
 ### 🎬 Allure Report Demonstration
 https://youtu.be/99mPiVD2a_o
+
 [![Allure Report](https://img.youtube.com/vi/99mPiVD2a_o/0.jpg)](https://youtu.be/99mPiVD2a_o)
 
 ### 🎬 Resources and Logs
 https://youtu.be/Fhk5PlEZEBI
+
 [![Resources and Logs](https://img.youtube.com/vi/Fhk5PlEZEBI/0.jpg)](https://youtu.be/Fhk5PlEZEBI)
 
 
