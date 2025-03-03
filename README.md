@@ -1,4 +1,4 @@
-# 🚀 Test Automation Project
+#  Test Automation Project
 
 Welcome to the **Test Automation Project**, a comprehensive and scalable framework designed for web automation testing. This project utilizes **Selenium WebDriver**, **TestNG**, **Allure Reporting**, and other robust technologies to ensure seamless automated testing for web applications.
 
